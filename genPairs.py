@@ -13,7 +13,7 @@ if len(sys.argv) != 2:
     print('Usage: genPairs.py len\nGenerate 1M sequences of length len, randomly mutate each up to len/2 times to create 1M pairs. Compute the edit distance between each pair. Output to three files: s-len.fa, t-len.fa, and ed-len.npy. The corresponding entry in the three files make up a pair of sequences and their edit distance.')
     sys.exit(1)
 
-num_pairs = 1000
+num_pairs = 1000000
 length = int(sys.argv[1])
 
 s = [randSeq(length) for _ in range(num_pairs)]
@@ -30,4 +30,4 @@ with open(f't-{length}.fa', 'w') as fout:
         fout.write(f'>{i}\n{t[i]}\n')
 
 np.save(f'ed-{length}.npy', ed)
-np.save(f'mut-{length}.npy', num_mut)
+#np.save(f'mut-{length}.npy', num_mut)
