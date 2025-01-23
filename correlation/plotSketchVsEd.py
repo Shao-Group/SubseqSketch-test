@@ -20,6 +20,8 @@ pr = pearsonr(ed, sketch)[0]
 sp = pearsonr(rankdata(ed, method='ordinal'),
               rankdata(sketch, method='ordinal'))[0]
 
+plt.figure(figsize=(12,9))
+plt.rcParams.update({'font.size':21})
 plt.scatter(ed, sketch, label=f'{sys.argv[3]} {pr:.3f}')
 
 # Add title and labels
