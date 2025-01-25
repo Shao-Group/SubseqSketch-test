@@ -10,7 +10,7 @@ def kMutations(s:str, k:int) -> str:
     return t
 
 if len(sys.argv) != 2:
-    print('Usage: genPairs.py len\nGenerate 1M sequences of length len, randomly mutate each up to len times to create 1M pairs. Compute the edit distance between each pair. Output to three files: s-len.fa, t-len.fa, and ed-len.npy. The corresponding entry in the three files make up a pair of sequences and their edit distance.')
+    print('Usage: genPairs.py len\nGenerate 100K sequences of length len, randomly mutate each up to len times to create 100K pairs. Compute the edit distance between each pair. Output to three files: s-len.fa, t-len.fa, and ed-len.npy. The corresponding entry in the three files make up a pair of sequences and their edit distance.')
     sys.exit(1)
 
 num_pairs = 100000
